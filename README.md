@@ -11,3 +11,8 @@ followed the instructions at [angular.io's quickstart guide](https://angular.io/
 npm install -g @angular/cli
 ng new xtdsrch
 ```
+
+install bootstrap css:
+```bash
+npm install bootstrap --save
+```

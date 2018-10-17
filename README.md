@@ -16,3 +16,8 @@ install bootstrap css:
 ```bash
 npm install bootstrap --save
 ```
+
+add in memory support:
+```bash
+npm install angular-in-memory-web-api --save
+```

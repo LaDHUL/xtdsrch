@@ -14,74 +14,73 @@ export class InMemoryDataService implements InMemoryDbService {
 
   createDb() {
     let persons = [
-        {
-			id: "EzraPound",
-			firstName: "Ezra",
-			lastName: "Pound",
-			birth: "30.10.1885",
-			death: "01.11.1972"
-			
-		},
-		{
-			id: "HD",
-			firstName: "Hilda",
-			lastName: "Doolittle",
-			birth: "10.09.1886",
-			death: "27.09.1961"
-		},
-		{
-			id: "JamesJoyce",
-			firstName: "James",
-			lastName: "Joyce",
-			birth: "02.02.1882",
-			death: "13.01.1941"
-		}
+      {
+        id: "EzraPound",
+        firstName: "Ezra",
+        lastName: "Pound",
+        birth: "30.10.1885",
+        death: "01.11.1972"
+      },
+      {
+        id: "HD",
+        firstName: "Hilda",
+        lastName: "Doolittle",
+        birth: "10.09.1886",
+        death: "27.09.1961"
+      },
+      {
+        id: "JamesJoyce",
+        firstName: "James",
+        lastName: "Joyce",
+        birth: "02.02.1882",
+        death: "13.01.1941"
+      }
     ];
-    
+
     let works = [
-        {
-            title: "Sea Garden",
-            format: "book",
-            kind: "poetry",
-            publication: "1916",
-            author: "HD"
-        },
-        {
-            title: "Hymen",
-            format: "book",
-            kind: "poetry",
-            publication: "1921",
-            author: "HD"
-        },
-        {
-            title: "Red Roses for Bronze",
-            format: "book",
-            kind: "poetry",
-            publication: "1932",
-            author: "HD"
-        },
-        {
-            title: "Ripostes",
-            format: "book",
-            kind: "poetry",
-            publication: "1912",
-            author: "EzraPound"
-        },
-        {
-            title: "Lustra",
-            format: "book",
-            kind: "poetry",
-            publication: "1916",
-            author: "EzraPound"
-        },
-        {
-            title: "A Portrait of the Artist as a Young Man",
-            format: "book",
-            kind: "novel",
-            publication: "1916",
-            author: "JamesJoyce"
-        }
+      {
+        title: "Sea Garden",
+        format: "book",
+        kind: "poetry",
+        publication: "1916",
+        author: "HD"
+      },
+      {
+        title: "Hymen",
+        format: "book",
+        kind: "poetry",
+        publication: "1921",
+        author: "HD"
+      },
+      {
+        title: "Red Roses for Bronze",
+        format: "book",
+        kind: "poetry",
+        publication: "1932",
+        author: "HD"
+      },
+      {
+        title: "Ripostes",
+        format: "book",
+        kind: "poetry",
+        publication: "1912",
+        author: "EzraPound"
+      },
+      {
+        title: "Lustra",
+        format: "book",
+        kind: "poetry",
+        publication: "1916",
+        author: "EzraPound"
+      },
+      {
+        title: "A Portrait of the Artist as a Young Man",
+        format: "book",
+        kind: "novel",
+        publication: "1916",
+        author: "JamesJoyce"
+      }
     ];
     return [persons, works];
-};
+  };
 }

@@ -1,3 +1,13 @@
-<p>
-  works works!
-</p>
+<ul class="works">
+    <li *ngFor="let work of works">
+      <!--
+      <a routerLink="/detail/{{hero.id}}">
+      -->
+          <span class="badge">{{work.title}}</span> {{work.author}}
+      <!--
+      </a>
+      <button class="delete" title="delete hero"
+        (click)="delete(hero)">x</button>
+      -->
+    </li>
+  </ul>

@@ -10,10 +10,9 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 
 export class InMemoryDataService implements InMemoryDbService {
-  constructor() { }
 
   createDb() {
-    let persons = [
+    const persons = [
       {
         id: "EzraPound",
         firstName: "Ezra",
@@ -37,7 +36,7 @@ export class InMemoryDataService implements InMemoryDbService {
       }
     ];
 
-    let works = [
+    const works = [
       {
         title: "Sea Garden",
         format: "book",
@@ -81,6 +80,6 @@ export class InMemoryDataService implements InMemoryDbService {
         author: "JamesJoyce"
       }
     ];
-    return [persons, works];
+    return {persons, works};
   };
 }

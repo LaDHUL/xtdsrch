@@ -5,10 +5,12 @@ import { PersonsComponent } from './persons/persons.component';
 import { WorksComponent } from './works/works.component';
 import { WorkComponent } from './work/work.component';
 import { PersonComponent } from './person/person.component';
+import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full' },
+  { path: 'search', component: SearchComponent },
   { path: 'works', component: WorksComponent },
   { path: 'persons', component: PersonsComponent },
 ];

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'xtdsrch';
+  title = 'Library';
+  selected: string;
+
+  ngOnInit() {
+    this.selected = 'search'
+  }
 }

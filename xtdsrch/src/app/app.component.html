@@ -1,9 +1,9 @@
 <h1>Extended search</h1>
 
-<nav>
-  <a routerLink="/search">Search</a>
-  <a routerLink="/persons">Persons</a>
-  <a routerLink="/works">Works</a>
-</nav>
+<ul class="nav nav-tabs">
+  <li [ngClass]="{'nav-link': true, 'active': selected==='search'}"><a (click)="selected='search'" routerLink="/search">Search</a></li>
+  <li [ngClass]="{'nav-link': true, 'active': selected==='persons'}"><a (click)="selected='persons'" routerLink="/persons">Persons</a></li>
+  <li [ngClass]="{'nav-link': true, 'active': selected==='works'}"><a (click)="selected='works'" routerLink="/works">Works</a></li>
+</ul>
 
 <router-outlet></router-outlet>

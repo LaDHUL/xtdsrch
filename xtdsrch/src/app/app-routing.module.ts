@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PersonsComponent } from './persons/persons.component';
 import { WorksComponent } from './works/works.component';
-import { WorkComponent } from './work/work.component';
-import { PersonComponent } from './person/person.component';
 import { SearchComponent } from './search/search.component';
 
 

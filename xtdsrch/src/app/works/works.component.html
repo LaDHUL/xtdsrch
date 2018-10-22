@@ -1,13 +1,22 @@
-<ul class="works">
-    <li *ngFor="let work of works">
-      <!--
-      <a routerLink="/detail/{{hero.id}}">
-      -->
-          <span class="badge">{{work.title}}</span> {{work.author}}
-      <!--
-      </a>
-      <button class="delete" title="delete hero"
-        (click)="delete(hero)">x</button>
-      -->
-    </li>
-  </ul>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">title</th>
+        <th scope="col">Format</th>
+        <th scope="col">Kind</th>
+        <th scope="col">Publication</th>
+        <th scope="col">Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let work of works" (click)="onSelect(work)">
+        <th scope="row">{{work.title}}</th>
+        <td>{{work.format}}</td>
+        <td>{{work.kind}}</td>
+        <td>{{work.publication}}</td>
+        <td>{{work.author}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-work-detail [work]="selectedWork"></app-work-detail>

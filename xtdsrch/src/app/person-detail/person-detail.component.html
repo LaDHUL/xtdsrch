@@ -1,0 +1,13 @@
+<table *ngIf="person" class="table framed jumbotron">
+  <h2>{{person.firstName}} {{person.lastName}} ({{person.id}}) details</h2>
+  <tbody>
+    <tr>
+      <th>birth:</th>
+      <th>{{person.birth}}</th>
+    </tr>
+    <tr>
+      <th>death:</th>
+      <th>{{person.death}}</th>
+    </tr>
+  </tbody>
+</table>

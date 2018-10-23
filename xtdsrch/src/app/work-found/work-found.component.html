@@ -1,0 +1,11 @@
+<!-- show a search result set -->
+<div class="framed">
+  <h3>Results:
+  <span class="badge">{{works.length}}</span>
+  </h3>
+
+  <ul *ngIf="works.length != 0">
+      <li *ngFor="let item of works">{{item.title}} ({{item.author}} : {{item.publication}} - {{item.format}} {{item.kind}})</li>
+  </ul>
+
+</div>

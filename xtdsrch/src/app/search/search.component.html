@@ -1,3 +1,17 @@
-<p>
-  search works!
-</p>
+<h1>{{title}}</h1>
+
+<!-- selection of the search type -->
+<div>
+    search for:
+    <select (change)="onTypeSelect(selection.value)" #selection>
+        <option *ngFor="let type of searchDesc.types"
+         value="{{type}}"
+         [selected]="type === selectedType">
+         {{type}}
+        </option>
+    </select>
+</div>
+
+<app-person-search *ngIf="selectedType === 'Person'"></app-person-search>
+
+<app-work-search *ngIf="selectedType === 'Work'"></app-work-search>

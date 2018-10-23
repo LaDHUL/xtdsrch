@@ -1,0 +1,27 @@
+<h3>{{title}}</h3>
+
+<!-- simple / extended search toggle -->
+<span class="btn-group" role="group" aria-label="..." (click)="toggleExtended()">
+  <button type="button" [ngClass]="{'btn': true, 'btn-info': !extended, 'btn-dark': extended}">
+    simple search
+  </button>
+  <button type="button" [ngClass]="{'btn': true, 'btn-info': extended, 'btn-dark': !extended}">
+    extended search
+  </button>
+</span>
+
+<!-- simple search -->
+<div class="framed" *ngIf="!extended">
+  search string: <input [(ngModel)]="work.title" placeholder="any field" />
+</div>
+
+<!-- extended search -->
+<div class="framed" *ngIf="extended">
+  <app-work-search-form [work]="work" (searched)="downstreamPersons($event)">></app-work-search-form>
+</div>
+
+<!-- search button -->
+<button class="btn btn-primary room-above" (click)="triggerSearch()">Search</button>
+
+<!-- result list -->
+<app-work-found [works]="found"></app-work-found>

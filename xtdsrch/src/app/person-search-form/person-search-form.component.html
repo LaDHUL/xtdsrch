@@ -1,0 +1,49 @@
+<!-- selection of the search type -->
+<span class="btn-group room-above" role="group" aria-label="...">
+  <button
+     *ngFor="let field of fields"
+     type="button" class="btn btn-secondary"
+     [ngClass]="{'active': isFieldSelected(field)}"
+     (click)="setFieldSelected(field)"
+     value="field">
+     {{field}}
+ </button>
+</span>
+<ul class="room-above">
+ <li *ngIf="isFieldSelected('id')">id:
+     <input [(ngModel)]="person.id" placeholder="id"/></li>
+ <li *ngIf="isFieldSelected('firstName')">firstname:
+     <input [(ngModel)]="person.firstName" placeholder="firstName"/></li>
+ <li *ngIf="isFieldSelected('lastName')">lastName:
+     <input [(ngModel)]="person.lastName" placeholder="lastName"/></li>
+ <li *ngIf="isFieldSelected('birth')">birth:
+     <input [(ngModel)]="person.birth" placeholder="birth"/></li>
+ <li *ngIf="isFieldSelected('death')">death:
+     <input [(ngModel)]="person.death" placeholder="death"/></li>
+</ul>
+
+<!-- incoming links -->
+<!-- button to add a book search -->
+<div *ngIf="!workSearchAdded">
+ add work search:
+ <button class="btn"
+    type="button" class="btn btn-default"
+    (click)="toggleWorkSearch(field)"
+    value="addworks">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</button>
+</div>
+<div *ngIf="workSearchAdded">
+remove work search:
+<button class="btn"
+   type="button" class="btn btn-default"
+   (click)="toggleWorkSearch(field)"
+   value="addworks">
+   <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+</button>
+</div>
+
+<!-- add the work search -->
+<div class="framed" *ngIf="workSearchAdded">
+ <app-work-search (searched)="downstreamWorks($event)"></app-work-search>
+</div>

@@ -1,0 +1,11 @@
+<!-- show a search result set -->
+<div class="framed">
+  <h3>Results:
+  <span class="badge">{{persons.length}}</span>
+  </h3>
+
+  <ul *ngIf="persons.length != 0">
+      <li *ngFor="let item of persons">{{item.firstName}} {{item.lastName}} ({{item.birth}} - {{item.death}})</li>
+  </ul>
+
+</div>

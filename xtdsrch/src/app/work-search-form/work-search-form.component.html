@@ -1,0 +1,29 @@
+<!-- selection of the search type -->
+<span class="btn-group room-above" role="group" aria-label="...">
+  <button
+     *ngFor="let field of fields"
+     type="button" class="btn btn-secondary"
+     [ngClass]="{'active': isFieldSelected(field)}"
+     (click)="setFieldSelected(field)"
+     value="field">
+     {{field}}
+ </button>
+</span>
+<ul class="room-above">
+ <li *ngIf="isFieldSelected('title')">title:
+     <input [(ngModel)]="work.title" placeholder="title"/></li>
+ <li *ngIf="isFieldSelected('format')">format:
+     <input [(ngModel)]="work.format" placeholder="format"/></li>
+ <li *ngIf="isFieldSelected('kind')">kind:
+     <input [(ngModel)]="work.kind" placeholder="kind"/></li>
+ <li *ngIf="isFieldSelected('publication')">publication:
+     <input [(ngModel)]="work.publication" placeholder="publication"/></li>
+ <li *ngIf="isFieldSelected('author')">author:
+     <app-person-search (searched)="downstreamPersons($event)"></app-person-search>
+     <!-- TODO: can we have a recursion "a book linked to a person linked to a book"? -->
+     <!-- TODO: if yes, implement, if no, imlpement ways to avoid it -->
+     <!-- input [(ngModel)]="work.author" placeholder="author"/--> </li>
+</ul>
+
+<!-- incoming links -->
+<!-- there is none -->

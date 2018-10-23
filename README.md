@@ -27,7 +27,7 @@ Works:
   We look for books whose authors wrote at least a book of poetry.  
   We then check if there are novels in the lot.
 
-  
+  ![demo "poets don't write novels"](https://github.com/LaDHUL/xtdsrch/blob/master/xtdsrch/poets-dont-write-novels.gif)
 
 # start
 

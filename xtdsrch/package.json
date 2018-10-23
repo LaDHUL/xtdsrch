@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "docker-build": "docker build -t xtdsrch .",
+    "docker": "npm run docker-build && docker run -it --rm -p 4200:4200 xtdsrch"
   },
   "private": true,
   "dependencies": {

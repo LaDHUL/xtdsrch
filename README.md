@@ -2,22 +2,40 @@
 
 Clickable mock-up of what an extended search could be
 
-# Dev Notes
+# data set
 
-## bootstrap
+simplistic:
 
-followed the instructions at [angular.io's quickstart guide](https://angular.io/guide/quickstart):
+Authors:
+- Ezra Pound
+- Hilda Doolittle
+- James Joyce
+
+Works:
+- Sea Garden (poetry) by Hilda Doolittle
+- Hymen	(poetry) by Hilda Doolittle
+- Red Roses for Bronze (poetry) by Hilda Doolittle
+- Ripostes (poetry) by Ezra Pound
+- Lustra (poetry) by Ezra Pound
+- A Portrait of the Artist as a Young Man (novel) by James Joyce
+
+# exemple of questions
+
+- Are authors dedicated to a form of literature? Do poets write novels and do novelists write poems?
+
+  Do poets write novels?  
+  We look for books whose authors wrote at least a book of poetry.  
+  We then check if there are novels in the lot.
+
+  
+
+# start
+
+start with:
 ```bash
-npm install -g @angular/cli
-ng new xtdsrch
+ng serve
 ```
 
-install bootstrap css:
-```bash
-npm install bootstrap --save
-```
+(if you need something to be installed, follow the error messages)
 
-add in memory support:
-```bash
-npm install angular-in-memory-web-api --save
-```
+browse to: http://localhost:4200

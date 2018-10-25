@@ -2,6 +2,8 @@
 
 Clickable mock-up of what an extended search could be
 
+You can try it out on: https://ladhul.github.io/xtdsrch/
+
 # data set
 
 simplistic:
